@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body_background: #f3f4f6;
+  --body_color: rgb(17 24 39);
+  --primary: #3b82f6;
+  --primary_hover: #2563eb;
+  --secondary: #f59e0b;
+  --secondary_hover: #d97706;
+}
+
+[data-theme="dark"] {
+  --body_background: rgb(3, 7, 18);
+  --body_color: #f3f4f6;
+  a {
+    color: #f3f4f6;
+  }
+  li {
+    color: #f3f4f6;
+  }
+  /* Add styles for other HTML tags here */
+  body {
+    background-color: var(--body_background);
+    color: var(--body_color);
+  }
+  p {
+    color: #f3f4f6; /* Example color for paragraphs */
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #f3f4f6;
+  }
+  code {
+    color: #f3f4f6 !important;
+  }
+  strong {
+    color: #f3f4f6 !important;
+  }
+  span {
+    color: #f3f4f6 !important;
+  }
+  li::marker,
+  ul::marker {
+    color: #f3f4f6 !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.03s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--body_background) !important;
+  color: var(--body_color) !important;
+}
+
+@layer components {
+  @layer components {
+    .button-link {
+      @apply inline-block w-full px-4 py-1 text-sm font-medium leading-5 text-center text-white transition duration-150 ease-in-out bg-blue-900 border border-transparent rounded-md shadow-md cursor-pointer hover:bg-blue-400 focus:outline-none focus:border-blue-600 active:bg-blue-600 hover:shadow-none;
+    }
+
+    .button-link:hover {
+      @apply bg-blue-600;
+    }
+  }
+}
